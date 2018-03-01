@@ -5,7 +5,7 @@
 
 __updated__ = '2018-03-01 14:16:04'
 
-from . import main as m
+from .main import main
 
 if __name__ == '__main__':
-    m.main()
+    main()
