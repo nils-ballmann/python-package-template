@@ -28,7 +28,7 @@
         },
         {
             "label": "clean rest",
-            "command": "rm -rf ./.noseids; rm -rf ./*.egg-info; find ../nanopooltool/ -name '__pycache__' -type d -exec rm -rf '{}' +",
+            "command": "rm -rf ./.noseids; rm -rf ./*.egg-info; find ../PACKAGE_NAME/ -name '__pycache__' -type d -exec rm -rf '{}' +",
             "type": "shell",
             "windows": {
                 "command": "rm -rec -fo .\\.noseids; rm -rec -fo .\\*.egg-info; Find-ChildItem -Name '__pycache__' -Type d -Exec 'rm -rec -fo {} '"
