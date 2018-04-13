@@ -2,5 +2,10 @@
     "python.unitTest.nosetestArgs": [
         "PACKAGE_NAME/tests"
     ],
-    "python.unitTest.nosetestsEnabled": true
+    "python.unitTest.nosetestsEnabled": true,
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ],
+    "spellright.language": "English (American)"
 }
