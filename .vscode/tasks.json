@@ -24,6 +24,24 @@
             "group": {
                 "kind": "test",
                 "isDefault": true
+            },
+        },
+        {
+            "label": "build docs",
+            "command": "python3 ./setup.py build_sphinx",
+            "type": "shell",
+            "problemMatcher": [],
+            "windows": {
+                "command": "py -3 .\\setup.py build_sphinx"
+            }
+        },
+        {
+            "label": "clean docs",
+            "command": "rm -rf ./docs/build",
+            "type": "shell",
+            "problemMatcher": [],
+            "windows": {
+                "command": "rm -rec -fo .\\docs\\build",
             }
         },
         {

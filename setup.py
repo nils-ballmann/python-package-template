@@ -3,7 +3,7 @@
 
 # pylint: disable=C0111
 
-__updated__ = '2018-03-01 14:42:06'
+__updated__ = '2018-04-13 10:16:11'
 
 from setuptools import find_packages, setup
 
@@ -40,15 +40,26 @@ setup(
         'Programming Language :: Python :: 3.6', 'Operating System :: Microsoft :: Windows',
         'Operating System :: POSIX :: Linux', 'Natural Language :: English'
     ],
+    command_options={
+        'build_sphinx': {
+            'project': ('setup.py', PACKAGE_NAME.__name__),
+            'copyright': ('setup.py', 'PACKAGE_COPYRIGHT_YEAR, PACKAGE_COPYRIGHT_NAME'),
+            'version': ('setup.py', PACKAGE_NAME.__version__),
+            'release': ('setup.py', PACKAGE_NAME.__version__),
+            'builder': ('setup.py', 'html'),
+            'source_dir': ('setup.py', 'docs'),
+            'build_dir': ('setup.py', 'docs/build')
+        }
+    },
     description='PACKAGE_SHORT_DESCRIPTION',
     entry_points={
-        'console_scripts': ['PACKAGE_EXECUTABLE=PACKAGE_NAME.main:main'],
+        'console_scripts': ['PACKAGE_EXECUTABLE={}.main:main'.format(PACKAGE_NAME.__name__)],
     },
     include_package_data=True,
     install_requires=requirements(),
     license='MIT',
     long_description=readme(),
-    name='PACKAGE_NAME',
+    name=PACKAGE_NAME.__name__,
     packages=find_packages(exclude=['tests']),
     python_requires='>=3.6, <4',
     test_suite='nose.collector',
