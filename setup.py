@@ -29,6 +29,9 @@ def requirements():
     with open('requirements.txt') as req_file:
         return list(map(lambda s: s.strip(), req_file.readlines()))
 
+def requirements_test():
+    with open('requirements.test.txt') as req_file:
+        return list(map(lambda s: s.strip(), req_file.readlines()))
 
 # https://pypi.python.org/pypi?%3Aaction=list_classifiers
 
@@ -63,7 +66,7 @@ setup(
     packages=find_packages(exclude=['tests']),
     python_requires='>=3.6, <4',
     test_suite='nose.collector',
-    tests_require=['nose', 'coverage'],
+    tests_require=requirements_test(),
     url='PACKAGE_URL',
     version=PACKAGE_NAME.__version__,
     zip_safe=False
