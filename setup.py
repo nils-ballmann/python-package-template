@@ -3,7 +3,7 @@
 
 # pylint: disable=C0111
 
-__updated__ = '2018-04-13 10:16:11'
+__updated__ = '2018-05-09 22:33:46'
 
 from setuptools import find_packages, setup
 
@@ -29,11 +29,13 @@ def requirements():
     with open('requirements.txt') as req_file:
         return list(map(lambda s: s.strip(), req_file.readlines()))
 
+
 def requirements_test():
     with open('requirements.test.txt') as req_file:
         return list(map(lambda s: s.strip(), req_file.readlines()))
 
 # https://pypi.python.org/pypi?%3Aaction=list_classifiers
+
 
 setup(
     author='PACKAGE_AUTHOR',
@@ -56,7 +58,7 @@ setup(
     },
     description='PACKAGE_SHORT_DESCRIPTION',
     entry_points={
-        'console_scripts': ['PACKAGE_EXECUTABLE={}.main:main'.format(PACKAGE_NAME.__name__)],
+        'console_scripts': ['PACKAGE_EXECUTABLE={}.tool:main'.format(PACKAGE_NAME.__name__)],
     },
     include_package_data=True,
     install_requires=requirements(),

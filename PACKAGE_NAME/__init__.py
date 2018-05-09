@@ -12,6 +12,6 @@ __all__ = [
     'PACKAGE_PUBLIC_API'
 ]
 
-from .main import main
+from .tool import main
 
 PACKAGE_PUBLIC_API
