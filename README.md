@@ -4,7 +4,7 @@ If `grep -R "PACKAGE_[\w]*" *` shows no more lines, minimum package information 
 
 PACKAGE_DESCRIPTION
 
-**Authors:** PACKAGE_AUTHOR <PACKAGE_AUTHOR_MAIL>  
+**Authors:** PACKAGE_AUTHOR_NAME <PACKAGE_AUTHOR_MAIL>  
 **Version:** PACKAGE_VERSION (PACKAGE_RELEASE_DATE)
 
 ## Installation

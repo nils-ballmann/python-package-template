@@ -38,7 +38,7 @@ def requirements_test():
 
 
 setup(
-    author='PACKAGE_AUTHOR',
+    author='PACKAGE_AUTHOR_NAME',
     author_email='PACKAGE_AUTHOR_MAIL',
     classifiers=[
         'Development Status :: 3 - Alpha', 'License :: OSI Approved :: MIT License',
