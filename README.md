@@ -1,4 +1,4 @@
-# PACKAGE_NAME README
+# README
 
 If `grep -R "PACKAGE_[\w]*" *` shows no more lines, minimum package information is complete.
 
