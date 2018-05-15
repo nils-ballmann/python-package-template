@@ -28,7 +28,7 @@
         },
         {
             "label": "build docs",
-            "command": "python3 ./setup.py build_sphinx",
+            "command": "python3.6 ./setup.py build_sphinx",
             "type": "shell",
             "problemMatcher": [],
             "windows": {
