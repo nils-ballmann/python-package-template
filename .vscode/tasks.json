@@ -51,6 +51,9 @@
             "label": "clean wheel",
             "command": "${config:python.pythonPath} ./setup.py clean -a --bdist-base dist; rm -rf build",
             "type": "shell",
+            "windows": {
+                "command": "${config:python.pythonPath} .\\setup.py clean -a --bdist-base dist; rm -rec -fo build",
+            },
             "problemMatcher": []
         },
         {
