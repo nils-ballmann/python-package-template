@@ -5,35 +5,29 @@
     "tasks": [
         {
             "label": "build wheel",
-            "command": "python3.6 ./setup.py bdist_wheel",
+            "command": "${config:python.pythonPath} ./setup.py bdist_wheel",
             "type": "shell",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "windows": {
-                "command": "py -3 .\\setup.py bdist_wheel"
             }
         },
         {
             "label": "build coverage",
-            "command": "nosetests PACKAGE_NAME/tests --with-coverage --cover-html --cover-html-dir ./coverage --cover-tests --cover-erase --cover-branches --cover-package=PACKAGE_NAME",
+            "command": "${config:python.pythonPath} -m nose PACKAGE_NAME/tests --with-coverage --cover-html --cover-html-dir ./coverage --cover-tests --cover-erase --cover-branches --cover-package=PACKAGE_NAME",
             "type": "shell",
             "problemMatcher": [],
             "group": {
                 "kind": "test",
                 "isDefault": true
-            },
+            }
         },
         {
             "label": "build docs",
-            "command": "python3.6 ./setup.py build_sphinx",
+            "command": "${config:python.pythonPath} ./setup.py build_sphinx",
             "type": "shell",
-            "problemMatcher": [],
-            "windows": {
-                "command": "py -3 .\\setup.py build_sphinx"
-            }
+            "problemMatcher": []
         },
         {
             "label": "clean docs",
@@ -55,11 +49,8 @@
         },
         {
             "label": "clean wheel",
-            "command": "python3.6 setup.py clean -a --bdist-base dist; rm -rf build",
+            "command": "${config:python.pythonPath} ./setup.py clean -a --bdist-base dist; rm -rf build",
             "type": "shell",
-            "windows": {
-                "command": "py -3 setup.py clean -a --bdist-base dist; rm -rec -fo build"
-            },
             "problemMatcher": []
         },
         {
