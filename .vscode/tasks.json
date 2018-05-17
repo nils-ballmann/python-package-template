@@ -40,7 +40,7 @@
         },
         {
             "label": "clean rest",
-            "command": "rm -rf ./.noseids; rm -rf ./*.egg-info; find ../PACKAGE_NAME/ -name '__pycache__' -type d -exec rm -rf '{}' +",
+            "command": "rm -rf ./.noseids; rm -rf ./*.egg-info; find . -name '__pycache__' -type d -exec rm -rf '{}' +",
             "type": "shell",
             "windows": {
                 "command": "rm -rec -fo .\\.noseids; rm -rec -fo .\\*.egg-info; Get-ChildItem -rec -fo -include __pycache__ | Remove-Item -rec -fo"
