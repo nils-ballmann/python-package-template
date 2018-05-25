@@ -5,8 +5,9 @@ Welcome to PACKAGE_NAME's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   README
    api
+
+.. mdinclude:: ../README.md
 
 
 Indices and tables

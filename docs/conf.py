@@ -29,7 +29,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.intersphinx',
-    'readmedoc'
+    'm2r'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -40,9 +40,7 @@ extensions = [
 source_suffix = ['.rst', '.md']
 
 # The parsers to use for different source file suffixes.
-source_parsers = {
-    '.md': 'recommonmark.parser.CommonMarkParser',
-}
+source_parsers = {}
 
 # The master toctree document.
 master_doc = 'index'
